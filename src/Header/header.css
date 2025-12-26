@@ -1,0 +1,26 @@
+.container-header{
+    background: #043873;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header-nav{
+display: flex;
+gap: 32px;
+padding: 20px 0;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+}
+
+.header-button-yellow{
+    background: #FFE492;
+    padding: 8px;
+    border-radius: 8px;
+    color: #043873;
+}

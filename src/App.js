@@ -1,10 +1,11 @@
+import { Banner } from "./Banner/Banner";
+import { Header } from "./Header/Header";
 
 function App() {
   return (
     <div className="App">
-
-     KEK
-    
+      <Header />
+      <Banner />
     </div>
   );
 }
