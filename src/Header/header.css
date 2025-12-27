@@ -8,7 +8,7 @@
 }
 
 .header-nav{
-display: flex;
+display: inline-flex;
 gap: 32px;
 padding: 20px 0;
 }
@@ -16,6 +16,15 @@ padding: 20px 0;
 .link{
     color: white;
     text-decoration: none;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.header-actions {
+    display: flex;
+    gap: 24px;
+    align-items: center;
 }
 
 .header-button-yellow{
@@ -23,4 +32,13 @@ padding: 20px 0;
     padding: 8px;
     border-radius: 8px;
     color: #043873;
+}
+.header-button-blue{
+    background-color: #4F9CF9;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
