@@ -32,8 +32,14 @@ export const Header = () => {
           Try Whitepace free
           <img src="../img/Icon.png" alt="arrow" />
         </button>
-        <div className="burger-menu">=</div>
+
+        
+        
       </div>
+      <div className="burger-menu">
+          <img src="../img/Hum-menu.png" alt="="/>
+        </div>
     </div>
+    
   );
 };
