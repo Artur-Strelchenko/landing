@@ -9,6 +9,12 @@
     
 }
 
+.burger-menu {
+    display: none; 
+    font-size: 40px;
+    color: white;
+}
+
 @media (max-width: 1440px) {
   .container-header {
     justify-content: space-between;
@@ -25,7 +31,7 @@ padding: 20px 0;
 @media (max-width: 1150px) {
     .container-header {
         justify-content: space-between;
-        padding: 0 20px;
+        padding: 0px 20px;
     }
    
     .header-nav {
@@ -37,10 +43,10 @@ padding: 20px 0;
         margin-left: auto;
         margin-right: 20px;
         display: flex;
-        padding: 20px 0px;
+        padding: 10px 0px;
     }
    .burger-menu{
-    font-size: 50px;
+    font-size: 40px;
     color: white;
     display: block;
 }
@@ -92,10 +98,15 @@ color: #f7f8fa;
 .header-button-blue:hover {
   background-color: #4f9bf9ca;
   color: #012551;
+  transition: background-color 1s ease, color 1s ease;
 }
 
 @media (max-width: 768px) {
     .header-actions{
         display: none;
+    }
+    .container-header{
+    padding: 16px 32px;
+    
     }
   }
