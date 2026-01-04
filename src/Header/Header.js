@@ -51,15 +51,37 @@ export const Header = () => {
           openBurgerMenu ? "burger-open" : "burger-close"
         }`}
       >
+         <div className="mobile-logo">
+          <a href="/">
+          <img src="../img/logo.png" alt="logo"/>
+          </a>
+        </div>
+
         <div
           className="close-burger-menu"
           onClick={() => {
             setBurgerMenu(false);
           }}
         >
-          X{/* МОЖЕШЬ ДОБАВИТЬ КАРТИНКУ */}
+        <img src="../img/humen.png" alt="X" className="close-icon" />
         </div>
-        <div>{/* ПЕРЕНЕСИ КОНТЕНТ ИЗ КОМПА (КНОПКИ И СЫЛКИ) */}</div>
+
+        <nav className="burger-open-menu">
+            <a href="/" className="link">
+            Products
+            <img src="../img/Vector.png" alt="vector" className="icon-arrow" /></a>
+            <a href="/"  className="link">Solutions
+            <img src="../img/Vector.png" alt="vector" className="icon-arrow" /></a>
+            <a href="/"  className="link">Resources
+            <img src="../img/Vector.png" alt="vector" className="icon-arrow" /></a>
+            <a href="/"  className="link">Pricing
+            <img src="../img/Vector.png" alt="vector" className="icon-arrow" /></a>
+<div className="mobile-menu-actions">
+  <button className="header-button-yellow">Login</button>
+  <button className="header-button-blue">
+            Try Whitepace free</button>
+</div>
+        </nav>
       </div>
     </>
   );
