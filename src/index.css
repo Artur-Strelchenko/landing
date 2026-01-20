@@ -26,10 +26,17 @@ blockquote {
 
 /* 3. Body defaults */
 body {
-  min-height: 100vh;
   line-height: 1.5;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Arial, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Ubuntu,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
   text-rendering: optimizeSpeed;
 }
 
@@ -82,4 +89,9 @@ table {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.wrapper {
+  margin-top: 70px;
+  background: red;
 }

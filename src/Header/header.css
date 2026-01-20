@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  top: 0;
 }
 
 .burger-menu {
@@ -85,7 +86,9 @@
   padding: 8px;
   border-radius: 8px;
   color: #043873;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 }
 
 .header-button-yellow:hover {
@@ -105,7 +108,9 @@
 .header-button-blue:hover {
   background-color: #4f9bf9ca;
   color: #012551;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 }
 
 @media (max-width: 768px) {
@@ -197,9 +202,12 @@
 
 .message-number {
   position: absolute;
-  top: -5px;
-  right: -15px;
+  top: -12px;
+  right: 5px;
   font-size: 11px;
   color: red;
   font-weight: 500;
+  background: #fff;
+  padding: 2px;
+  border-radius: 50%;
 }

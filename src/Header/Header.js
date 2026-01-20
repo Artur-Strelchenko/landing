@@ -124,18 +124,22 @@ export const Header = () => {
 
         <nav className="burger-open-menu">
           <div className="link-burger">
-            <a href={headerResponse.link} className="link">
-              Products
-            </a>
-            <a href={headerResponse.link} className="link">
-              Solutions
-            </a>
-            <a href={headerResponse.link} className="link">
-              Resources
-            </a>
-            <a href={headerResponse.link} className="link">
-              Pricing
-            </a>
+            {headerResponse.headerLink.map((item) => {
+              if (!item.showLink) return null;
+
+              return (
+                <Link to={item.link} className="link">
+                  <span className="link-text-container">
+                    {item.title}{" "}
+                    {item.messageCount > 0 && (
+                      <span className="message-number">
+                        {item.messageCount}
+                      </span>
+                    )}
+                  </span>
+                </Link>
+              );
+            })}
           </div>
           <div className="mobile-menu-actions">
             <a
