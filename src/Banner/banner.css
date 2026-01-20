@@ -1,4 +1,5 @@
-.container-banner{
-    background: red;
-    padding-top: 150px;
+.container-banner {
+  background: #043873;
+  min-height: 80vh;
+  padding-top: 150px;
 }

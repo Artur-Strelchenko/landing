@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 
 const headerResponse = {
   headerLogo: { link: "/", picture: "../img/logo.png" },
+  headerButtons: {
+    login: { title: "Login", link: "/" },
+    trial: { title: "Try Whitepace free", link: "/" },
+  },
   headerLink: [
     {
       title: "Products",
@@ -38,10 +42,15 @@ const headerResponse = {
       link: "message",
       picture: "../img/Vector.png",
       showLink: true,
-      messageCount: 200,
+      messageCount: 123,
       id: 5,
     },
   ],
+  headerLoginButton: { text: "Login" },
+  headerTryWhitepacefreeButton: {
+    text: "Try Whitepace free",
+    picture: "../img/Icon.png",
+  },
 };
 
 export const Header = () => {
@@ -60,7 +69,12 @@ export const Header = () => {
 
             return (
               <Link to={item.link} key={item.id} className="link">
-                {item.title} {item.messageCount && `|${item.messageCount}|`}
+                <span className="link-text-container">
+                  {item.title}{" "}
+                  {item.messageCount > 0 && (
+                    <span className="message-number">{item.messageCount}</span>
+                  )}
+                </span>
                 <img src={item.picture} alt="vector" className="icon-arrow" />
               </Link>
             );
@@ -68,10 +82,15 @@ export const Header = () => {
         </div>
 
         <div className="header-actions">
-          <button className="header-button-yellow">Login</button>
+          <button className="header-button-yellow">
+            {headerResponse.headerLoginButton.text}
+          </button>
           <button className="header-button-blue">
-            Try Whitepace free
-            <img src="../img/Icon.png" alt="arrow" />
+            {headerResponse.headerTryWhitepacefreeButton.text}
+            <img
+              src={headerResponse.headerTryWhitepacefreeButton.picture}
+              alt="arrow"
+            />
           </button>
         </div>
         <div
@@ -89,8 +108,8 @@ export const Header = () => {
         }`}
       >
         <div className="mobile-logo">
-          <a href="/">
-            <img src="../img/logo.png" alt="logo" />
+          <a href={headerResponse.headerLogo.link}>
+            <img src={headerResponse.headerLogo.picture} alt="logo" />
           </a>
         </div>
 
@@ -105,22 +124,32 @@ export const Header = () => {
 
         <nav className="burger-open-menu">
           <div className="link-burger">
-            <a href="/" className="link">
+            <a href={headerResponse.link} className="link">
               Products
             </a>
-            <a href="/" className="link">
+            <a href={headerResponse.link} className="link">
               Solutions
             </a>
-            <a href="/" className="link">
+            <a href={headerResponse.link} className="link">
               Resources
             </a>
-            <a href="/" className="link">
+            <a href={headerResponse.link} className="link">
               Pricing
             </a>
           </div>
           <div className="mobile-menu-actions">
-            <button className="header-button-yellow">Login</button>
-            <button className="header-button-blue">Try Whitepace free</button>
+            <a
+              href={headerResponse.headerButtons.login.link}
+              className="header-button-yellow"
+            >
+              {headerResponse.headerButtons.login.title}
+            </a>
+            <a
+              href={headerResponse.headerButtons.trial.link}
+              className="header-button-blue"
+            >
+              {headerResponse.headerButtons.trial.title}
+            </a>
           </div>
         </nav>
       </div>
