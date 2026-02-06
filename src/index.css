@@ -1,13 +1,9 @@
-===== Normalize / Base reset =====
-
-/* 1. Box model */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* 2. Remove default margins */
 body,
 h1,
 h2,
@@ -90,8 +86,11 @@ table {
     scroll-behavior: auto !important;
   }
 }
-
+/* WRAPPER STYLES */
+.App {
+  overflow: hidden;
+}
 .wrapper {
-  margin-top: 70px;
-  background: red;
+  max-width: 1440px;
+  margin: 0 auto;
 }
