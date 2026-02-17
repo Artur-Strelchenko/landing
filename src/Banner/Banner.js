@@ -2,20 +2,20 @@ import "./banner.css";
 
 export const Banner = (props) => {
   const bannerResponse = props.data;
-
+  const isNoColor = props.withoutColor;
   if (!bannerResponse) return null;
 
   return (
-    <div className="bannerSection">
+    <div className={`bannerSection ${isNoColor ? "no-color" : ""}`}>
       <div className="container-banner">
-        {/* ФОН ДЛЯ КАРТИНОК  */}
-        <div className="wrapperImg">
-          <div
-            style={{ backgroundImage: `url(${bannerResponse?.bgBanner})` }}
-            alt="bg"
-            className="wrapperPicture"
-          />
-        </div>
+        {!isNoColor && (
+          <div className="wrapperImg">
+            <div
+              style={{ backgroundImage: `url(${bannerResponse?.bgBanner})` }}
+              className="wrapperPicture"
+            />
+          </div>
+        )}
         {/* ФОН ДЛЯ КАРТИНОК  */}
         <div className="bannerLeft">
           <h1 className="bannerTitle">{bannerResponse.title}</h1>

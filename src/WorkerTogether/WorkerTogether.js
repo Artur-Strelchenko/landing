@@ -10,5 +10,11 @@ const workerResponse = {
   },
 };
 export const WorkerTogether = () => {
-  return <div>WorkerTogether</div>;
+  return (
+    <div className="worker">
+      ;<h1>{workerResponse.title}</h1>
+      <p>{workerResponse.subTitle}</p>
+      {/* Тут має бути решта верстки, схожа на Banner */}
+    </div>
+  );
 };
