@@ -1,6 +1,0 @@
-#!/bin/sh
-# husky.sh подключается к хукам
-. "$(dirname "$0")/_/husky.sh"
-
-# Windows-safe
-npx --no-install commitlint --edit "%1"

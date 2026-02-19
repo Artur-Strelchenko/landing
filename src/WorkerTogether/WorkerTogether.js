@@ -16,7 +16,13 @@ export const WorkerTogether = () => {
       <div className="container-worker">
         <div className="workerLeft">
           <h1 className="workerTitle">
-            {workerResponse.title} <span>{workerResponse.titleAccent}</span>
+            {workerResponse.title}{" "}
+            <span>
+              {workerResponse.titleAccent}
+              <div className="underline">
+                <img src={"../img/line.png"} alt="_____" />
+              </div>
+            </span>
           </h1>
 
           <p className="workerSubtitle">{workerResponse.subTitle}</p>
@@ -32,6 +38,7 @@ export const WorkerTogether = () => {
             )}
           </button>
         </div>
+
         <div className="workerImgRight">
           <img src="../img/project.png" alt="project" />
         </div>
