@@ -1,4 +1,6 @@
 import "./workerTogether.css";
+import React from "react";
+
 const workerResponse = {
   title: "Project",
   titleAccent: "Management",
@@ -9,7 +11,12 @@ const workerResponse = {
     login: { title: "Try it now", link: "/" },
     picture: "/img/Icon.png",
   },
+  Image: "../img/Work Together Image.png",
+  Title: "Work together",
+  Subtitle:
+    "With whitepace, share your notes with your colleagues and collaborate on them. You can also publish a note to the internet and share the URL with others.",
 };
+
 export const WorkerTogether = () => {
   return (
     <div className="projectSection">
@@ -26,6 +33,12 @@ export const WorkerTogether = () => {
           </h1>
 
           <p className="workerSubtitle">{workerResponse.subTitle}</p>
+
+          <div className="Content">
+            <h3 className="Title">{workerResponse.Title}</h3>
+            <p className="Subtitle">{workerResponse.Subtitle}</p>
+            <img src={workerResponse.Image} alt="work together" />
+          </div>
 
           <button className="bannerButton">
             {workerResponse.buttonTitle.login.title}

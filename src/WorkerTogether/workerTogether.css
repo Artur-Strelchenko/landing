@@ -1,52 +1,53 @@
 .projectSection {
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
-  gap: 40px;
-  padding: 100px 20px;
-  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container-worker {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.workerImgRight {
-  flex: 1; 
+.workerLeft {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  margin-right: 50px;
 }
 
 .workerTitle {
   font-size: 48px;
-  font-weight: 700;
-  color: #212529;
-  margin-bottom: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .workerTitle span {
   position: relative;
-  display: inline-block; 
-  z-index: 1;
+  bottom: 5px;
 }
 
-.workerTitle span::after {
-  /* content: ""; */
-  position: absolute;
-  left: 0;
-  bottom: 8px; 
-  width: 100%;
-  height: 12px; 
-  background-image: img src="../img/line.png"; 
-  background-repeat: no-repeat;
-  background-size: 100% 100%; 
-  
-  z-index: -1;
-  
+.workerSubtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
 }
-.workerLeft {
-  flex: 1; 
+
+.workerImgRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.workerImgRight img {
+  max-width: 400px;
+  max-height: 300px;
 }
