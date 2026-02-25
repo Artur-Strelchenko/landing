@@ -1,18 +1,27 @@
-.projectSection {
+/* .projectSection {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 90px 32px;
+} */
+.projectSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 64px;
+  padding: 90px 32px;
+  box-sizing: border-box;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: relative;
 }
-
 .container-worker {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
-  max-width: 1200px;
 }
 
 .workerLeft {
@@ -22,6 +31,11 @@
   align-items: flex-start;
   width: 50%;
   margin-right: 50px;
+}
+
+.bannerRight img {
+  max-width: 748px;
+  max-height: 547px;
 }
 
 .workerTitle {
@@ -45,9 +59,4 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-}
-
-.workerImgRight img {
-  max-width: 400px;
-  max-height: 300px;
 }
