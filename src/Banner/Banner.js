@@ -3,11 +3,17 @@ import "./banner.css";
 export const Banner = (props) => {
   const bannerResponse = props.data;
   const isNoColor = props.withoutColor;
+  const isReverseRow = props.reverseRow;
+  const withoutPictureLine = props.withoutPictureLine;
+
   if (!bannerResponse) return null;
 
   return (
     <div className={`bannerSection ${isNoColor ? "no-color" : ""}`}>
-      <div className="container-banner">
+      <div
+        className="container-banner"
+        style={{ flexDirection: isReverseRow ? "row-reverse" : "row" }}
+      >
         {!isNoColor && (
           <div className="wrapperImg">
             <div
@@ -18,8 +24,19 @@ export const Banner = (props) => {
         )}
         {/* ФОН ДЛЯ КАРТИНОК  */}
         <div className="bannerLeft">
-          <h1 className="bannerTitle">{bannerResponse.title}</h1>
-          <p className="bannerSubtitle">{bannerResponse.subtitle}</p>
+          <h1
+            className="bannerTitle"
+            style={{ color: isNoColor ? "black" : "white" }}
+          >
+            {bannerResponse.title}
+          </h1>
+          {/* {//////// ЛОГИКА НА ЗОЛОТИСТУЮ КРАТИНКУ} */}
+          <p
+            className="bannerSubtitle"
+            style={{ color: isNoColor ? "black" : "white" }}
+          >
+            {bannerResponse.subtitle}
+          </p>
           <button className="bannerButton">
             {bannerResponse.buttonTitle.login.title}
             {bannerResponse.buttonTitle.picture && (
