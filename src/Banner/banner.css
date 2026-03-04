@@ -2,15 +2,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 64px;
+  margin-top: 0 auto;
   color: #ffffff;
   padding: 90px 32px;
   box-sizing: border-box;
   width: 100%;
   background-repeat: no-repeat;
   position: relative;
+  box-sizing: border-box;
 }
 
+/* .bannerSection {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+}
+ */
+
+.container-header {
+  max-width: 1400px;
+}
 .bannerLeft {
   flex: 1;
   display: flex;
